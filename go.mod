@@ -1,6 +1,8 @@
-module github.com/Starz0r/AutoMod
+module github.com/Starz0r/Decision
 
-go 1.11
+go 1.12
+
+replace github.com/bwmarrin/discordgo => ./lib/discordgo
 
 require (
 	github.com/bwmarrin/discordgo v0.22.0
