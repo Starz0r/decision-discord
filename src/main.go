@@ -25,7 +25,7 @@ var (
 )
 
 func main() {
-	logger.Info().Msg("DVoting 0.1.0, Starting Up.")
+	logger.Info().Msg("Decision 0.2.0, Starting Up.")
 
 	// search for discord websocket gateway
 	err := *new(error)
@@ -52,7 +52,7 @@ func main() {
 	}
 
 	// stay connected until interrupted
-	logger.Info().Msg("DVoting 0.1.0, Startup Finshed.")
+	logger.Info().Msg("Decision 0.2.0, Startup Finshed.")
 	logger.Debug().Msgf("State Enabled: %t", discord.StateEnabled)
 	logger.Debug().Msgf("Intent Channels: %t", discord.State.TrackChannels)
 	logger.Debug().Msgf("Intent Members: %t", discord.State.TrackMembers)
