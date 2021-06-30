@@ -25,9 +25,9 @@ jobs:
                 condition: <<parameters.with_deploy>>
                 steps:
                     - run:
-                        name: Deploy
+                        name: Publish
                         command: |
-                            docker login -u $CONTAINER_REGISTRY_USER -p $CONTAINER_REGISTRY_PASS
+                            echo $CONTAINER_REGISTRY_PASS | docker login ghcr.io -u $CONTAINER_REGISTRY_USER --password-stdin
                             docker push $CONTAINER_REGISTRY_URL/$CONTAINER_REGISTRY/decision-discord:latest
                             
 workflows:
