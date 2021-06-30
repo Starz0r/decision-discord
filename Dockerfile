@@ -6,6 +6,7 @@ RUN apk add git
 RUN mkdir /build
 ADD . /build/
 WORKDIR /build
+RUN git submodule update --init --recursive
 ENV GO111MODULE=on
 RUN CGO_ENABLED=0 GOOS=linux go build -i -v -a -installsuffix cgo -ldflags '-extldflags "-static"' -o decision ./src/
 
