@@ -1,6 +1,6 @@
 module github.com/Starz0r/Decision
 
-go 1.12
+go 1.13
 
 replace github.com/bwmarrin/discordgo => ./lib/discordgo
 
