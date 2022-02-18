@@ -14,7 +14,10 @@ jobs:
                 default: false
         executor: docker
         steps:
-            - apk add git ssh --no-cache
+            - run:
+                name: Install Git & SSH
+                command: |
+                    apk add git ssh --no-cache
             - checkout
             - setup_remote_docker:
                 version: 17.09.0-ce
