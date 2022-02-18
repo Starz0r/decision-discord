@@ -15,9 +15,13 @@ jobs:
         executor: docker
         steps:
             - run:
+                name: Udapte Alpine APK Cache
+                command: |
+                    apk update
+            - run:
                 name: Install Git & SSH
                 command: |
-                    apk add git ssh --no-cache
+                    apk add git openssh-client openssh --no-cache
             - checkout
             - setup_remote_docker:
                 version: 17.09.0-ce
