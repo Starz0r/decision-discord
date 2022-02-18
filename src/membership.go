@@ -11,7 +11,7 @@ import (
 	"github.com/spidernest-go/logger"
 )
 
-var REQVOTES = 5
+var REQVOTES = 4
 var BALLOTCOUNT = make(map[string]int8)
 var BALLOTMUTEX sync.RWMutex
 var VOTEMSG *discordgo.Message
